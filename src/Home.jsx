@@ -1,6 +1,8 @@
 import {Link} from "react-router";
 import {useState} from "react";
 import emailjs from "emailjs-com";
+import GlitchText from "./Glitchtext.jsx";
+
 
 function Home() {
 
@@ -22,14 +24,11 @@ function Home() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const { name, email, phone, message } = formData;
+        const { name, email, message } = formData;
 
-        const mailtoLink = `mailto:jouw@email.com?subject=Contact via portfolio - ${name}&body=
-                Naam: ${name}%0D%0A
-                Email: ${email}%0D%0A
-                Telefoon: ${phone}%0D%0A
-                Bericht: ${message}`;
+        const mailtoLink = `mailto:smmuijs2002@gmail.com?subject=Contact via portfolio - ${name}&body=Naam: ${name}%0D%0AEmail: ${email}%0D%0ATelefoon: ${formData.phone}%0D%0ABericht: ${message}`;
 
+        // Verzend de email via mailto
         window.location.href = mailtoLink;
     };
 
@@ -39,18 +38,30 @@ function Home() {
                 <div
                     className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-x-20 text-center">
                     <div className="mt-10 flex-1">
-                        <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold">Designer</h1>
+                        <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold relative flex">
+                            <span className="block transition-all duration-300 ease-in-out hover:translate-y-6">D</span>
+                            <span className="block transition-all duration-300 ease-in-out hover:translate-y-6">e</span>
+                            <span className="block transition-all duration-300 ease-in-out hover:translate-y-6">s</span>
+                            <span className="block transition-all duration-300 ease-in-out hover:translate-y-6">i</span>
+                            <span className="block transition-all duration-300 ease-in-out hover:translate-y-6">g</span>
+                            <span className="block transition-all duration-300 ease-in-out hover:translate-y-6">n</span>
+                            <span className="block transition-all duration-300 ease-in-out hover:translate-y-6">e</span>
+                            <span className="block transition-all duration-300 ease-in-out hover:translate-y-6">r</span>
+                        </h1>
+
                     </div>
 
-                    <img src="./Myself.png" alt="Picture of myself" className="w-3/4 md:w-1/3 max-w-xl mt-8 md:mt-0"/>
+                    <img src="./Myself.png" alt="Picture of myself"
+                         className="transition-all duration-500 hover:scale-105 w-3/4 md:w-1/3 max-w-xl mt-8 md:mt-0"/>
 
                     <div className="mt-10 flex-1">
-                        <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold">{"<Coder>"}</h1>
+                        <GlitchText text={"<Coder>"}/>
                     </div>
                 </div>
 
 
-                <h1 className="text-center text-white mt-2 text-4xl md:text-4xl font-bold">Stefan Muijs</h1>
+                <h1 className="text-center text-white mt-2 text-4xl md:text-4xl font-bold hover:text-[#FFA052] transition-all duration-300">Stefan
+                    Muijs</h1>
                 <hr className="w-1/3 border-t-2 border-[#FFA052] mt-4"/>
                 <p className="text-white mt-4 text-center max-w-2xl">Ik ben een gedreven creatieve fullstack
                     webdeveloper in opleiding bij
@@ -153,7 +164,7 @@ function Home() {
 
                 <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 text-center">
                     {/* First Image */}
-                    <Link to="openhiring" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
+                    <Link to="/openhiring" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
                             src="./showcase_images/OpenHiring/logo-oh.png"
                             alt="Open Hiring Logo"
@@ -163,7 +174,7 @@ function Home() {
                     </Link>
 
                     {/* Second Image */}
-                    <Link to="SOTD" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
+                    <Link to="/sotd" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
                             src="./showcase_images/SOTD/sotd4.webp"
                             alt="Placeholder 2"
@@ -173,7 +184,7 @@ function Home() {
                     </Link>
 
                     {/* Third Image */}
-                    <Link to="gaiapark" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
+                    <Link to="/gaiapark" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
                             src="./showcase_images/GaiaPark/GaiaPark1.webp"
                             alt="Placeholder 3"
@@ -181,7 +192,7 @@ function Home() {
                         />
                         <h3 className="text-[#FFA052] mt-4 text-lg font-semibold">GaiaPark</h3>
                     </Link>
-                    <Link to="speaksilent" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
+                    <Link to="/speaksilent" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
                             src="./showcase_images/SpeakSilent/SpeakSilent%20logo.png"
                             alt="Placeholder 3"
@@ -189,7 +200,7 @@ function Home() {
                         />
                         <h3 className="text-[#FFA052] mt-4 text-lg font-semibold">SpeakSilent</h3>
                     </Link>
-                    <Link to="excalibur" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
+                    <Link to="/excalibur" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
                             src="./showcase_images/Excalibur/Excalibur1.webp"
                             alt="Placeholder 3"
@@ -216,7 +227,7 @@ function Home() {
             </div>
 
             <div className="flex flex-col justify-center items-center px-10 py-20 min-h-[100vh]">
-                <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold mb-8">Contact Me</h1>
+                <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold mb-8">Contactformulier</h1>
 
                 <form
                     onSubmit={handleSubmit}
@@ -227,32 +238,35 @@ function Home() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Your Name"
+                        placeholder="Naam"
                         className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
+                        required
                     />
                     <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="Your Email"
+                        placeholder="Email"
                         className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
+                        required
                     />
                     <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="Your Phone"
+                        placeholder="Telefoonnummer (Optioneel)"
                         className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                     />
                     <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Your Message"
+                        placeholder="Bericht"
                         className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                         rows="4"
+                        required
                     />
                     <button
                         type="submit"

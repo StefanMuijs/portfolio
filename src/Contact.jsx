@@ -30,7 +30,7 @@ Bericht: ${formData.message}`;
 
     return (
         <div className="flex flex-col justify-center items-center px-10 py-20 min-h-[100vh]">
-            <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold mb-8">Contact Me</h1>
+            <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold mb-8">Contactformulier</h1>
 
             <form onSubmit={handleSubmit} className="flex flex-col max-w-lg w-full p-8 rounded-xl">
                 <input
@@ -38,7 +38,7 @@ Bericht: ${formData.message}`;
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your Name"
+                    placeholder="Naam"
                     required
                     className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                 />
@@ -47,7 +47,7 @@ Bericht: ${formData.message}`;
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Your Email"
+                    placeholder="Email"
                     required
                     className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                 />
@@ -56,14 +56,14 @@ Bericht: ${formData.message}`;
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="Your Phone"
+                    placeholder="Telefoonnummer (Optioneel)"
                     className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                 />
                 <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Your Message"
+                    placeholder="Bericht"
                     required
                     className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                     rows="4"
