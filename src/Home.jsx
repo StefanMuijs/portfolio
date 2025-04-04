@@ -96,7 +96,7 @@ function Home() {
                     </div>
 
                     {/* Mediavormgeving Section */}
-                    <div className="pt-6 rounded-lg">
+                    <div className="p-6 rounded-lg">
                         <h3 className="text-[#FFA052] text-xl font-semibold text-center">Mediavormgeving</h3>
                         <p className="text-sm md:text-base text-white text-center">Curio (2018 - 2022)</p>
                         <p className="text-sm mt-2 text-white text-center">
