@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-function Showcase() {
+function SpeakSilent() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -88,4 +88,4 @@ function Showcase() {
     );
 }
 
-export default Showcase;
+export default SpeakSilent;

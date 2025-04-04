@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-function Showcase() {
+function GaiaPark() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -76,4 +76,4 @@ function Showcase() {
     );
 }
 
-export default Showcase;
+export default GaiaPark;

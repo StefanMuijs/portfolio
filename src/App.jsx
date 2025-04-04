@@ -8,13 +8,16 @@ import SOTD from './showcase_pages/SOTD.jsx';
 import GaiaPark from './showcase_pages/GaiaPark.jsx';
 import SpeakSilent from './showcase_pages/SpeakSilent.jsx';
 import Excalibur from './showcase_pages/Excalibur.jsx';
+import Contact from "./Contact.jsx";
+import Portfolio from "./Portfolio.jsx";
 
 const router = createHashRouter([
     {
         element: <Layout />,
         children: [
             { path: '/', element: <Home /> },
-            { path: '/about', element: <About /> },
+            { path: '/portfolio', element: <Portfolio /> },
+            { path: '/contact', element: <Contact /> },
             { path: '/openhiring', element: <OpenHiring /> },
             { path: '/sotd', element: <SOTD /> },
             { path: '/gaiapark', element: <GaiaPark /> },

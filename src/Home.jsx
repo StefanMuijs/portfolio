@@ -1,5 +1,5 @@
 import {Link} from "react-router";
-import React, {useState} from "react";
+import {useState} from "react";
 import emailjs from "emailjs-com";
 
 function Home() {
@@ -22,23 +22,15 @@ function Home() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs
-            .sendForm(
-                "your_service_id",  // Replace with your EmailJS service ID
-                "your_template_id",  // Replace with your EmailJS template ID
-                e.target,
-                "your_user_id"       // Replace with your EmailJS user ID
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                    alert("Message sent successfully!");
-                },
-                (error) => {
-                    console.log(error.text);
-                    alert("There was an error sending your message.");
-                }
-            );
+        const { name, email, phone, message } = formData;
+
+        const mailtoLink = `mailto:jouw@email.com?subject=Contact via portfolio - ${name}&body=
+                Naam: ${name}%0D%0A
+                Email: ${email}%0D%0A
+                Telefoon: ${phone}%0D%0A
+                Bericht: ${message}`;
+
+        window.location.href = mailtoLink;
     };
 
     return (
@@ -236,7 +228,7 @@ function Home() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your Name"
-                        className="mb-4 p-3 text-white rounded-lg border-2 border-[#FFA052]"
+                        className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                     />
                     <input
                         type="email"
@@ -244,7 +236,7 @@ function Home() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Your Email"
-                        className="mb-4 p-3 text-white rounded-lg border-2 border-[#FFA052]"
+                        className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                     />
                     <input
                         type="tel"
@@ -252,19 +244,19 @@ function Home() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Your Phone"
-                        className="mb-4 p-3 text-white rounded-lg border-2 border-[#FFA052]"
+                        className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                     />
                     <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Your Message"
-                        className="mb-4 p-3 text-white rounded-lg border-2 border-[#FFA052]"
+                        className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
                         rows="4"
                     />
                     <button
                         type="submit"
-                        className="bg-[#FFA052] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#ff7e2c] transition-all"
+                        className="bg-[#FFA052] text-black py-3 px-6 rounded-lg font-semibold hover:bg-[#ff7e2c] transition-all"
                     >
                         Send Message
                     </button>

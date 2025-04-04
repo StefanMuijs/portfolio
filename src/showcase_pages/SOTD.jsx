@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-function Showcase() {
+function SOTD() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -82,4 +82,4 @@ function Showcase() {
     );
 }
 
-export default Showcase;
+export default SOTD;
