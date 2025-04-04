@@ -163,7 +163,7 @@ function Home() {
                     {/* First Image */}
                     <Link to="openhiring" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
-                            src="/showcase_images/OpenHiring/logo-oh.png"
+                            src="./showcase_images/OpenHiring/logo-oh.png"
                             alt="Open Hiring Logo"
                             className="w-full md:w-48 aspect-square object-cover border-2 rounded-tl-[75px] rounded-br-[75px]"
                         />
@@ -173,7 +173,7 @@ function Home() {
                     {/* Second Image */}
                     <Link to="SOTD" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
-                            src="/showcase_images/SOTD/sotd4.webp"
+                            src="/Portfoliowebsite/showcase_images/SOTD/sotd4.webp"
                             alt="Placeholder 2"
                             className="w-full md:w-48 aspect-square object-cover border-2 rounded-tl-[75px] rounded-br-[75px]"
                         />
