@@ -270,7 +270,7 @@ function Home() {
                     />
                     <button
                         type="submit"
-                        className="bg-[#FFA052] text-black py-3 px-6 rounded-lg font-semibold hover:bg-[#ff7e2c] transition-all"
+                        className="bg-[#FFA052] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#ff7e2c] transition-all"
                     >
                         Send Message
                     </button>
