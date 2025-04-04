@@ -46,24 +46,24 @@ function Portfolio() {
                     </div>
                 </section>
 
-                {/* MediaDesign */}
-                <section>
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#FFA052] mb-4">
-                        MediaDesign
-                    </h2>
-                    <hr className="w-full border-t-2 border-white mt-4 mb-4"/>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
-                        {[1, 2, 3].map((_, index) => (
-                            <div key={index} className="bg-white/5 p-3 rounded-2xl">
-                                <img
-                                    src="https://via.placeholder.com/200"
-                                    alt={`Placeholder ${index + 1}`}
-                                    className="w-full aspect-square object-cover rounded-tr-[60px] rounded-bl-[60px] border-2"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                {/*/!* MediaDesign *!/*/}
+                {/*<section>*/}
+                {/*    <h2 className="text-2xl md:text-3xl font-bold text-[#FFA052] mb-4">*/}
+                {/*        Mediavormgeving*/}
+                {/*    </h2>*/}
+                {/*    <hr className="w-full border-t-2 border-white mt-4 mb-4"/>*/}
+                {/*    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">*/}
+                {/*        {[1, 2, 3].map((_, index) => (*/}
+                {/*            <div key={index} className="bg-white/5 p-3 rounded-2xl">*/}
+                {/*                <img*/}
+                {/*                    src="https://via.placeholder.com/200"*/}
+                {/*                    alt={`Placeholder ${index + 1}`}*/}
+                {/*                    className="w-full aspect-square object-cover rounded-tr-[60px] rounded-bl-[60px] border-2"*/}
+                {/*                />*/}
+                {/*            </div>*/}
+                {/*        ))}*/}
+                {/*    </div>*/}
+                {/*</section>*/}
             </div>
         </>
     );

@@ -211,19 +211,19 @@ function Home() {
                 </div>
 
 
-                <div className="flex flex-col text-right">
-                    <h1 className="text-[#FFA052] text-xl md:text-2xl font-bold mt-10">MediaDesign</h1>
-                    <hr className="w-full border-t-2 border-white mt-4 mb-4"/>
-                </div>
+                {/*<div className="flex flex-col text-right">*/}
+                {/*    <h1 className="text-[#FFA052] text-xl md:text-2xl font-bold mt-10">Mediavormgeving</h1>*/}
+                {/*    <hr className="w-full border-t-2 border-white mt-4 mb-4"/>*/}
+                {/*</div>*/}
 
-                <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10 text-center">
-                    <img src="https://via.placeholder.com/200" alt="Placeholder 4"
-                         className="w-full md:w-48 aspect-square object-cover border-2 rounded-tr-[75px] rounded-bl-[75px]"/>
-                    <img src="https://via.placeholder.com/200" alt="Placeholder 5"
-                         className="w-full md:w-48 aspect-square object-cover border-2 rounded-tr-[75px] rounded-bl-[75px]"/>
-                    <img src="https://via.placeholder.com/200" alt="Placeholder 6"
-                         className="w-full md:w-48 aspect-square object-cover border-2 rounded-tr-[75px] rounded-bl-[75px]"/>
-                </div>
+                {/*<div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10 text-center">*/}
+                {/*    <img src="https://via.placeholder.com/200" alt="Placeholder 4"*/}
+                {/*         className="w-full md:w-48 aspect-square object-cover border-2 rounded-tr-[75px] rounded-bl-[75px]"/>*/}
+                {/*    <img src="https://via.placeholder.com/200" alt="Placeholder 5"*/}
+                {/*         className="w-full md:w-48 aspect-square object-cover border-2 rounded-tr-[75px] rounded-bl-[75px]"/>*/}
+                {/*    <img src="https://via.placeholder.com/200" alt="Placeholder 6"*/}
+                {/*         className="w-full md:w-48 aspect-square object-cover border-2 rounded-tr-[75px] rounded-bl-[75px]"/>*/}
+                {/*</div>*/}
             </div>
 
             <div className="flex flex-col justify-center items-center px-10 py-20 min-h-[100vh]">
