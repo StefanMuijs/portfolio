@@ -9,12 +9,12 @@ function Showcase() {
     const [selectedImage, setSelectedImage] = useState(null);
 
     const images = [
-        "/showcase_images/SpeakSilent/SpeakSilent1.webp",
-        "/showcase_images/SpeakSilent/SpeakSilent2.webp",
-        "/showcase_images/SpeakSilent/SpeakSilent3.webp",
-        "/showcase_images/SpeakSilent/SpeakSilent4.webp",
-        "/showcase_images/SpeakSilent/SpeakSilent5.webp",
-        "/showcase_images/SpeakSilent/SpeakSilent6.webp",
+        "./showcase_images/SpeakSilent/SpeakSilent1.webp",
+        "./showcase_images/SpeakSilent/SpeakSilent2.webp",
+        "./showcase_images/SpeakSilent/SpeakSilent3.webp",
+        "./showcase_images/SpeakSilent/SpeakSilent4.webp",
+        "./showcase_images/SpeakSilent/SpeakSilent5.webp",
+        "./showcase_images/SpeakSilent/SpeakSilent6.webp",
     ];
 
     return (
@@ -28,7 +28,7 @@ function Showcase() {
                     className="w-full h-full rounded-2xl border-2 border-[#FFA052] object-cover"
                     controls
                 >
-                    <source src="/showcase_videos/SpeakSilent%20showcase.mp4" type="video/mp4"/>
+                    <source src="./showcase_videos/SpeakSilent%20showcase.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
             </div>

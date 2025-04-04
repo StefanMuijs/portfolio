@@ -50,7 +50,7 @@ function Home() {
                         <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold">Designer</h1>
                     </div>
 
-                    <img src="/Myself.png" alt="Picture of myself" className="w-3/4 md:w-1/3 max-w-xl mt-8 md:mt-0"/>
+                    <img src="./Myself.png" alt="Picture of myself" className="w-3/4 md:w-1/3 max-w-xl mt-8 md:mt-0"/>
 
                     <div className="mt-10 flex-1">
                         <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold">{"<Coder>"}</h1>
@@ -173,7 +173,7 @@ function Home() {
                     {/* Second Image */}
                     <Link to="SOTD" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
-                            src="/Portfoliowebsite/showcase_images/SOTD/sotd4.webp"
+                            src="./showcase_images/SOTD/sotd4.webp"
                             alt="Placeholder 2"
                             className="w-full md:w-48 aspect-square object-cover border-2 rounded-tl-[75px] rounded-br-[75px]"
                         />
@@ -183,7 +183,7 @@ function Home() {
                     {/* Third Image */}
                     <Link to="gaiapark" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
-                            src="/showcase_images/GaiaPark/GaiaPark1.webp"
+                            src="./showcase_images/GaiaPark/GaiaPark1.webp"
                             alt="Placeholder 3"
                             className=" object-cover w-full md:w-48 aspect-square border-2 rounded-tl-[75px] rounded-br-[75px]"
                         />
@@ -191,7 +191,7 @@ function Home() {
                     </Link>
                     <Link to="speaksilent" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
-                            src="/showcase_images/SpeakSilent/SpeakSilent%20logo.png"
+                            src="./showcase_images/SpeakSilent/SpeakSilent%20logo.png"
                             alt="Placeholder 3"
                             className=" object-cover w-full md:w-48 aspect-square border-2 rounded-tl-[75px] rounded-br-[75px]"
                         />
@@ -199,7 +199,7 @@ function Home() {
                     </Link>
                     <Link to="excalibur" className="flex flex-col items-center p-4 rounded-xl hover:scale-110 transition-all duration-500">
                         <img
-                            src="/showcase_images/Excalibur/Excalibur1.webp"
+                            src="./showcase_images/Excalibur/Excalibur1.webp"
                             alt="Placeholder 3"
                             className=" object-cover w-full md:w-48 aspect-square border-2 rounded-tl-[75px] rounded-br-[75px]"
                         />

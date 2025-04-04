@@ -9,10 +9,10 @@ function Showcase() {
     const [selectedImage, setSelectedImage] = useState(null);
 
     const images = [
-        "/showcase_images/Excalibur/Excalibur2.webp",
-        "/showcase_images/Excalibur/Excalibur3.webp",
-        "/showcase_images/Excalibur/Excalibur4.webp",
-        "/showcase_images/Excalibur/Excalibur5.webp",
+        "./showcase_images/Excalibur/Excalibur2.webp",
+        "./showcase_images/Excalibur/Excalibur3.webp",
+        "./showcase_images/Excalibur/Excalibur4.webp",
+        "./showcase_images/Excalibur/Excalibur5.webp",
     ];
 
     return (
@@ -22,7 +22,7 @@ function Showcase() {
 
             <div className="w-full max-w-4xl mb-12">
                 <img
-                    src="/showcase_images/Excalibur/Excalibur1.webp"
+                    src="./showcase_images/Excalibur/Excalibur1.webp"
                     alt="GaiaPark"
                     className="w-full h-full rounded-2xl border-2 border-[#FFA052] object-cover"
                 />

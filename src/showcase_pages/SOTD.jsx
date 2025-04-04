@@ -9,13 +9,13 @@ function Showcase() {
     const [selectedImage, setSelectedImage] = useState(null);
 
     const images = [
-        "/showcase_images/SOTD/sotd1.webp",
-        "/showcase_images/SOTD/sotd2.webp",
-        "/showcase_images/SOTD/sotd3.webp",
-        "/showcase_images/SOTD/sotd4.webp",
-        "/showcase_images/SOTD/sotd5.webp",
-        "/showcase_images/SOTD/sotd6.webp",
-        "/showcase_images/SOTD/sotd7.webp",
+        "./showcase_images/SOTD/sotd1.webp",
+        "./showcase_images/SOTD/sotd2.webp",
+        "./showcase_images/SOTD/sotd3.webp",
+        "./showcase_images/SOTD/sotd4.webp",
+        "./showcase_images/SOTD/sotd5.webp",
+        "./showcase_images/SOTD/sotd6.webp",
+        "./showcase_images/SOTD/sotd7.webp",
     ];
 
     return (
@@ -29,7 +29,7 @@ function Showcase() {
                     className="w-full h-full rounded-2xl border-2 border-[#FFA052] object-cover"
                     controls
                 >
-                    <source src="/showcase_videos/SOTD%20Trailer.mp4" type="video/mp4"/>
+                    <source src="./showcase_videos/SOTD%20Trailer.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
             </div>

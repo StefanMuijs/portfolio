@@ -9,11 +9,11 @@ function Showcase() {
     const [selectedImage, setSelectedImage] = useState(null);
 
     const images = [
-        "/showcase_images/GaiaPark/GaiaPark2.webp",
-        "/showcase_images/GaiaPark/GaiaPark3.webp",
-        "/showcase_images/GaiaPark/GaiaPark4.webp",
-        "/showcase_images/GaiaPark/GaiaPark5.webp",
-        "/showcase_images/GaiaPark/GaiaPark6.webp",
+        "./showcase_images/GaiaPark/GaiaPark2.webp",
+        "./showcase_images/GaiaPark/GaiaPark3.webp",
+        "./showcase_images/GaiaPark/GaiaPark4.webp",
+        "./showcase_images/GaiaPark/GaiaPark5.webp",
+        "./showcase_images/GaiaPark/GaiaPark6.webp",
     ];
 
     return (
@@ -23,7 +23,7 @@ function Showcase() {
 
             <div className="w-full max-w-4xl mb-12">
                 <img
-                    src="/showcase_images/GaiaPark/GaiaPark1.webp"
+                    src="./showcase_images/GaiaPark/GaiaPark1.webp"
                     alt="GaiaPark"
                     className="w-full h-full rounded-2xl border-2 border-[#FFA052] object-cover"
                 />
