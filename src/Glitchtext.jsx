@@ -4,7 +4,7 @@ function GlitchText({ text }) {
     const [glitchedChars, setGlitchedChars] = useState(text.split(""));
     const intervalRef = useRef(null);
     const symbols = "}!@#$%^&*()_+-=[]{}|;:,.<>?";
-    const colors = ["#FFA052", "#FF5E5E", "#5EFFB0", "#5EDBFF", "#D95EFF", "#FFE45E"];
+    const colors = ["#ff6b2c", "#FF5E5E", "#5EFFB0", "#5EDBFF", "#D95EFF", "#FFE45E"];
 
     const getRandomSymbol = () => symbols[Math.floor(Math.random() * symbols.length)];
     const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
@@ -22,7 +22,7 @@ function GlitchText({ text }) {
 
     const stopGlitch = () => {
         clearInterval(intervalRef.current);
-        setGlitchedChars(text.split("").map((char) => ({ char, color: "#FFA052" })));
+        setGlitchedChars(text.split("").map((char) => ({ char, color: "#ff6b2c" })));
     };
 
     useEffect(() => {

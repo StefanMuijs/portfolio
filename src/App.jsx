@@ -1,4 +1,4 @@
-import './index.css'
+﻿import './index.css'
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Layout from './Layout.jsx';
 import Home from './Home.jsx';
@@ -9,14 +9,15 @@ import GaiaPark from './showcase_pages/GaiaPark.jsx';
 import SpeakSilent from './showcase_pages/SpeakSilent.jsx';
 import Excalibur from './showcase_pages/Excalibur.jsx';
 import Contact from "./Contact.jsx";
-import Portfolio from "./Portfolio.jsx";
+import Projecten from "./Projecten.jsx";
 
 const router = createHashRouter([
     {
         element: <Layout />,
         children: [
             { path: '/', element: <Home /> },
-            { path: '/portfolio', element: <Portfolio /> },
+            { path: '/about', element: <About /> },
+            { path: '/projecten', element: <Projecten /> },
             { path: '/contact', element: <Contact /> },
             { path: '/openhiring', element: <OpenHiring /> },
             { path: '/sotd', element: <SOTD /> },

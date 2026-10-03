@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import {useState} from "react";
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -8,74 +8,53 @@ function Contact() {
         message: "",
     });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+    const handleChange = (event) => {
+        const {name, value} = event.target;
+        setFormData((currentData) => ({...currentData, [name]: value}));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const mailtoLink = `mailto:smmuijs2002@gmail.com?subject=Contact via Portfolio van ${formData.name}&body=
-Naam: ${formData.name}%0D%0A
-Email: ${formData.email}%0D%0A
-Telefoon: ${formData.phone}%0D%0A
-Bericht: ${formData.message}`;
-
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const mailtoLink = `mailto:smmuijs2002@gmail.com?subject=Contact via Portfolio van ${formData.name}&body=Naam: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATelefoon: ${formData.phone}%0D%0ABericht: ${formData.message}`;
         window.location.href = mailtoLink;
     };
 
-    return (
-        <div className="flex flex-col justify-center items-center px-10 py-20 min-h-[100vh]">
-            <h1 className="text-[#FFA052] text-3xl md:text-5xl font-bold mb-8">Contactformulier</h1>
+    const fieldClass = "mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-[#0c0b0e] outline-none transition focus:border-[#ff6b2c] focus:ring-2 focus:ring-[#ff6b2c]/20";
 
-            <form onSubmit={handleSubmit} className="flex flex-col max-w-lg w-full p-8 rounded-xl">
-                <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Naam"
-                    required
-                    className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
-                />
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                    required
-                    className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
-                />
-                <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="Telefoonnummer (Optioneel)"
-                    className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
-                />
-                <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Bericht"
-                    required
-                    className="mb-4 p-3 text-black rounded-lg border-2 border-[#FFA052]"
-                    rows="4"
-                />
-                <button
-                    type="submit"
-                    className="bg-[#FFA052] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#ff7e2c] transition-all"
-                >
-                    Send Message
+    return (
+        <main className="mx-auto grid min-h-screen w-full max-w-6xl items-center gap-12 px-6 pb-16 pt-32 text-[#0c0b0e] md:grid-cols-[0.75fr_1.25fr]">
+            <header>
+                <p className="mb-4 border-l-4 border-[#ff6b2c] pl-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#ff6b2c]">
+                    -Contact
+                </p>
+                <h1 className="text-4xl font-bold leading-tight md:text-5xl">Contactformulier</h1>
+                <p className="mt-6 max-w-md leading-7 text-gray-600">
+                    Heb je een vraag of wil je samenwerken? Stuur me gerust een bericht.
+                </p>
+            </header>
+
+            <form onSubmit={handleSubmit} className="flex w-full flex-col gap-5 rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-sm sm:p-8">
+                <label className="text-sm font-medium">
+                    Naam
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Je naam" className={fieldClass} required />
+                </label>
+                <label className="text-sm font-medium">
+                    E-mailadres
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="naam@voorbeeld.nl" className={fieldClass} required />
+                </label>
+                <label className="text-sm font-medium">
+                    Telefoonnummer <span className="font-normal text-gray-600">(optioneel)</span>
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Je telefoonnummer" className={fieldClass} />
+                </label>
+                <label className="text-sm font-medium">
+                    Bericht
+                    <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Waar kan ik je mee helpen?" className={`${fieldClass} resize-y`} rows="5" required />
+                </label>
+                <button type="submit" className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff6b2c] px-6 py-3.5 font-semibold text-white transition-colors hover:bg-[#e85c22] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff6b2c] focus-visible:ring-offset-2">
+                    Verstuur bericht
                 </button>
             </form>
-        </div>
+        </main>
     );
 }
 
