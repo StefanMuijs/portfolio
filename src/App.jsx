@@ -10,6 +10,8 @@ import SpeakSilent from './showcase_pages/SpeakSilent.jsx';
 import Excalibur from './showcase_pages/Excalibur.jsx';
 import Contact from "./Contact.jsx";
 import Projecten from "./Projecten.jsx";
+import Wayfinding from "./showcase_pages/Wayfinding.jsx";
+import MyShadyJewels from "./showcase_pages/MSJ.jsx";
 
 const router = createHashRouter([
     {
@@ -21,8 +23,10 @@ const router = createHashRouter([
             { path: '/contact', element: <Contact /> },
             { path: '/openhiring', element: <OpenHiring /> },
             { path: '/sotd', element: <SOTD /> },
+            { path: '/wayfinding', element: <Wayfinding /> },
             { path: '/gaiapark', element: <GaiaPark /> },
             { path: '/speaksilent', element: <SpeakSilent /> },
+            { path: '/msj', element: <MyShadyJewels /> },
             { path: '/excalibur', element: <Excalibur /> },
         ]
     }
