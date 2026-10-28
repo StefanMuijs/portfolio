@@ -24,6 +24,10 @@ function Layout() {
         document.documentElement.lang = isEnglish ? "en" : "nl";
     }, [isEnglish]);
 
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: "auto"});
+    }, [pathname]);
+
     const isHomeAtTop = pathname === "/" && !isScrolled;
     const usesLightNavbar = !isHomeAtTop && !isDarkMode;
     const navForeground = usesLightNavbar ? "text-[#0c0b0e]" : "text-white";

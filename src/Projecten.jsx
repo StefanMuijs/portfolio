@@ -2,8 +2,14 @@
 
 import {useEnglish} from "./LanguageContext.jsx";
 
+import {useEffect} from "react";
+
 function Projecten() {
     const isEnglish = useEnglish();
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: "auto"});
+    }, []);
+
     const projects = [
         {
             to: "/openhiring",
